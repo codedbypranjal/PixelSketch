@@ -11,6 +11,7 @@ orig_h, orig_w = img.shape[:2]
 max_display_dim = 700
 # Calculate scale factor without losing original structural proportions
 scale = max_display_dim / max(orig_h, orig_w)
+    
 new_w = int(orig_w * scale)
 new_h = int(orig_h * scale)
 img = cv2.resize(img, (new_w, new_h), interpolation=cv2.INTER_LANCZOS4)
